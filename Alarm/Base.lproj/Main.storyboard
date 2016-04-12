@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bi8-GC-NZe">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Alarm-->
+        <scene sceneID="7Dq-o0-ZWF">
+            <objects>
+                <viewController title="Alarm" id="Pka-zd-m32" userLabel="Alarm" customClass="AlarmViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lew-RH-yZj"/>
+                        <viewControllerLayoutGuide type="bottom" id="iHm-We-amH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eDv-K2-odc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9cx-rJ-afU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="njA-TI-2EM">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="305"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="482183739.67844099">
+                                            <!--2016-04-12 19:55:39 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your alarm has not been set." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7C-Jw-KTe">
+                                        <rect key="frame" x="0.0" y="305" width="600" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIU-me-rfM">
+                                        <rect key="frame" x="0.0" y="366" width="600" height="60.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-Sa-LlX">
+                                        <rect key="frame" x="0.0" y="426.5" width="600" height="60.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                        <state key="normal" title="Set Alarm"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="Pka-zd-m32" eventType="touchUpInside" id="Z99-TC-IpX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dqg-Sa-LlX" firstAttribute="height" secondItem="V7C-Jw-KTe" secondAttribute="height" id="Se4-VF-7YF"/>
+                                    <constraint firstItem="V7C-Jw-KTe" firstAttribute="height" secondItem="njA-TI-2EM" secondAttribute="height" multiplier="1/5" id="Zap-5J-OhY"/>
+                                    <constraint firstItem="dIU-me-rfM" firstAttribute="height" secondItem="V7C-Jw-KTe" secondAttribute="height" id="afr-yA-IRs"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9cx-rJ-afU" secondAttribute="trailing" id="1w8-sO-ZjV"/>
+                            <constraint firstItem="9cx-rJ-afU" firstAttribute="top" secondItem="lew-RH-yZj" secondAttribute="bottom" id="STA-WL-luz"/>
+                            <constraint firstItem="iHm-We-amH" firstAttribute="top" secondItem="9cx-rJ-afU" secondAttribute="bottom" id="n3h-mH-gRV"/>
+                            <constraint firstItem="9cx-rJ-afU" firstAttribute="leading" secondItem="eDv-K2-odc" secondAttribute="leading" id="o9o-oY-HNu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alarm" id="FKM-Ag-xVx"/>
+                    <connections>
+                        <outlet property="button" destination="dqg-Sa-LlX" id="PL9-3P-GuH"/>
+                        <outlet property="datePicker" destination="njA-TI-2EM" id="KNE-we-deK"/>
+                        <outlet property="label" destination="V7C-Jw-KTe" id="I7i-3x-fjC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAE-PO-kbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1467" y="1224"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="2xA-Ao-b38">
+            <objects>
+                <viewController title="Timer" id="4F7-Ha-M90" userLabel="Timer" customClass="TimerViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pOR-HL-6ht"/>
+                        <viewControllerLayoutGuide type="bottom" id="AeB-8X-zQu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="66C-Yn-rbh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hmD-5Y-A8u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ren-dT-DLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="563"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2GV-zl-dOI">
+            <objects>
+                <tabBarController id="Bi8-GC-NZe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bbD-QM-oAK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eAE-iN-5Z3" kind="relationship" relationship="viewControllers" id="faH-uJ-rNr"/>
+                        <segue destination="qRU-Gj-DrM" kind="relationship" relationship="viewControllers" id="yLh-Ie-HPf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UEo-jX-f4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168" y="895"/>
+        </scene>
+        <!--Alarm-->
+        <scene sceneID="gtq-xH-yhI">
+            <objects>
+                <navigationController title="Alarm" automaticallyAdjustsScrollViewInsets="NO" id="qRU-Gj-DrM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" id="SAd-Cg-Wbp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aqo-nB-SyV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pka-zd-m32" kind="relationship" relationship="rootViewController" id="0FY-NX-0cR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feF-wa-gCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="1224"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="CcR-vv-ja4">
+            <objects>
+                <navigationController title="Timer" automaticallyAdjustsScrollViewInsets="NO" id="eAE-iN-5Z3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="byP-KD-bNM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Sn-Ib-Qi9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4F7-Ha-M90" kind="relationship" relationship="rootViewController" id="vPE-gf-EFt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9r3-gi-mg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="563"/>
+        </scene>
+    </scenes>
+</document>
